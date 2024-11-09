@@ -23,11 +23,11 @@ public class Auto {
 	public String verificarIntegridad(){
 		int rMotor = this.motor.registro;
 		int rAuto = this.registro;
-		boolean iguales = false;;
+		boolean iguales = true;;
 		String original;
 		
-		for (int i = 0; i < asientos.length - 1; i++) { 
-	        if (asientos[i].registro != asientos[i + 1].registro) {
+		for (Asiento asiento: asientos) { 
+	        if (asiento != null && asiento.registro != rAuto) {
 	            iguales = false;
 	            break;
 	        }
