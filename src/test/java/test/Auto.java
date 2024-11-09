@@ -23,15 +23,15 @@ public class Auto {
 	public String verificarIntegridad(){
 		int rMotor = this.motor.registro;
 		int rAuto = this.registro;
-		boolean iguales = true;
+		boolean iguales = false;;
 		String original;
 		
-		for(int i = 0; i < asientos.length - 1; i++) {
-			if(asientos[i].registro != asientos[i+1].registro) {
-				iguales = false;
-				break;
-			}
-		}
+		for (int i = 0; i < asientos.length - 1; i++) { 
+	        if (asientos[i].registro != asientos[i + 1].registro) {
+	            iguales = false;
+	            break;
+	        }
+	    }
 		
 		if(rMotor == rAuto && iguales) {
 			original = "Auto original";
