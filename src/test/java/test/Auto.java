@@ -29,7 +29,6 @@ public class Auto {
 		for(int i = 0; i < asientos.length - 1; i++) {
 			if(asientos[i].registro != asientos[i+1].registro) {
 				iguales = false;
-				break;
 			}
 		}
 		
